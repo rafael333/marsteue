@@ -28,22 +28,22 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
                         <div className="inline-flex items-center justify-center size-20 rounded-full bg-primary/10 mb-4">
                             <span className="material-symbols-outlined text-primary text-5xl">cake</span>
                         </div>
-                        <h1 className="text-[#1b120d] dark:text-white text-3xl font-extrabold mb-2">¡Bienvenida!</h1>
-                        <p className="text-[#9a664c] dark:text-white/60 text-sm">Ingresa para comenzar tu viaje con Malvaviscos 2.0</p>
+                        <h1 className="text-[#1b120d] dark:text-white text-3xl font-extrabold mb-2">Bem-vinda!</h1>
+                        <p className="text-[#9a664c] dark:text-white/60 text-sm">Entre para começar sua jornada com Marshmallows 2.0</p>
                     </div>
 
                     {/* Form */}
                     <form onSubmit={handleSubmit} className="space-y-5">
                         <div>
                             <label htmlFor="name" className="block text-[#1b120d] dark:text-white text-sm font-bold mb-2">
-                                Nombre Completo
+                                Nome Completo
                             </label>
                             <input
                                 type="text"
                                 id="name"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
-                                placeholder="Ingresa tu nombre"
+                                placeholder="Digite seu nome"
                                 className="w-full px-4 py-3 rounded-xl border-2 border-marshmallow-pink/30 dark:border-white/10 bg-white dark:bg-white/5 text-[#1b120d] dark:text-white placeholder-[#9a664c]/50 dark:placeholder-white/30 focus:outline-none focus:border-primary transition-colors"
                                 required
                             />
@@ -58,7 +58,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
                                 id="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                placeholder="tu@email.com"
+                                placeholder="seu@email.com"
                                 className="w-full px-4 py-3 rounded-xl border-2 border-marshmallow-pink/30 dark:border-white/10 bg-white dark:bg-white/5 text-[#1b120d] dark:text-white placeholder-[#9a664c]/50 dark:placeholder-white/30 focus:outline-none focus:border-primary transition-colors"
                                 required
                             />
@@ -68,13 +68,13 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
                             type="submit"
                             className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition-all active:scale-95 mt-6"
                         >
-                            Ingresar
+                            Entrar
                         </button>
                     </form>
 
                     {/* Footer */}
                     <p className="text-center text-[#9a664c] dark:text-white/40 text-xs mt-6">
-                        Al ingresar, aceptas nuestros términos de uso
+                        Ao entrar, você aceita nossos termos de uso
                     </p>
                 </div>
             </div>

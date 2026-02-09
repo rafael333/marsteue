@@ -25,86 +25,86 @@ const MarshmallowGuide: React.FC<MarshmallowGuideProps> = ({ onBack }) => {
                 <button onClick={onBack} className="text-primary size-10 flex items-center justify-center cursor-pointer">
                     <span className="material-symbols-outlined">arrow_back_ios</span>
                 </button>
-                <h2 className="text-[#1b120d] dark:text-white text-lg font-bold">Guía Completa</h2>
+                <h2 className="text-[#1b120d] dark:text-white text-lg font-bold">Guia Completo</h2>
                 <div className="w-10"></div>
             </header>
 
             <div className="guide-content">
                 {/* HEADER SECTION */}
                 <div className="guide-header">
-                    <div className="main-title">Malvaviscos</div>
-                    <div className="sub-title">Caseros</div>
-                    <div className="guide-tag">Guía completa sin horno</div>
+                    <div className="main-title">Marshmallows</div>
+                    <div className="sub-title">Caseiros</div>
+                    <div className="guide-tag">Guia completo sem forno</div>
                 </div>
 
                 {/* ALERT */}
                 <div className="alert-box">
                     <p className="alert-text">
-                        ⚠️ <span style={{ textDecoration: 'underline' }}>IMPORTANTE:</span> Los malvaviscos caseros son sensibles a
-                        la humedad. El secreto está en cocinar el almíbar al punto exacto y dejar secar muy bien.
+                        ⚠️ <span style={{ textDecoration: 'underline' }}>IMPORTANTE:</span> Os marshmallows caseiros são sensíveis à
+                        umidade. O segredo está em cozinhar a calda no ponto exato e deixar secar muito bem.
                     </p>
                 </div>
 
                 {/* INGREDIENTS */}
-                <h2 className="section-title">Ingredientes Exactos</h2>
+                <h2 className="section-title">Ingredientes Exatos</h2>
                 <div className="grid-4">
                     <div className="card">
                         <div className="card-header">1. Hidratar</div>
                         <ul className="ingredient-list">
                             <li className="ingredient-item"><i className="ri-drop-line"></i> 12g Gelatina</li>
-                            <li className="ingredient-item"><i className="ri-cup-line"></i> 60ml Agua</li>
+                            <li className="ingredient-item"><i className="ri-cup-line"></i> 60ml Água</li>
                         </ul>
                     </div>
                     <div className="card">
-                        <div className="card-header">2. Almíbar</div>
+                        <div className="card-header">2. Calda</div>
                         <ul className="ingredient-list">
-                            <li className="ingredient-item"><i className="ri-spoon-line"></i> 200g Azúcar</li>
-                            <li className="ingredient-item"><i className="ri-contrast-drop-line"></i> 120ml Agua</li>
-                            <li className="ingredient-item"><i className="ri-honey-pot-line"></i> 100g Glucosa</li>
+                            <li className="ingredient-item"><i className="ri-spoon-line"></i> 200g Açúcar</li>
+                            <li className="ingredient-item"><i className="ri-contrast-drop-line"></i> 120ml Água</li>
+                            <li className="ingredient-item"><i className="ri-honey-pot-line"></i> 100g Glicose</li>
                         </ul>
                     </div>
                     <div className="card">
                         <div className="card-header">3. Finalizar</div>
                         <ul className="ingredient-list">
-                            <li className="ingredient-item"><i className="ri-magic-line"></i> 1 cdta Vainilla</li>
-                            <li className="ingredient-item"><i className="ri-palette-line"></i> Colorante Gel</li>
-                            <li className="ingredient-item"><i className="ri-shining-line"></i> Pizca de Sal</li>
+                            <li className="ingredient-item"><i className="ri-magic-line"></i> 1 colher chá Baunilha</li>
+                            <li className="ingredient-item"><i className="ri-palette-line"></i> Corante Gel</li>
+                            <li className="ingredient-item"><i className="ri-shining-line"></i> Pitada de Sal</li>
                         </ul>
                     </div>
                     <div className="card">
-                        <div className="card-header">4. Espolvorear</div>
+                        <div className="card-header">4. Polvilhar</div>
                         <ul className="ingredient-list">
-                            <li className="ingredient-item"><i className="ri-snowy-line"></i> 100g Azúcar Glass</li>
-                            <li className="ingredient-item"><i className="ri-seedling-line"></i> 100g Fécula Maíz</li>
+                            <li className="ingredient-item"><i className="ri-snowy-line"></i> 100g Açúcar de Confeiteiro</li>
+                            <li className="ingredient-item"><i className="ri-seedling-line"></i> 100g Fécula Milho</li>
                         </ul>
                     </div>
                 </div>
 
                 {/* PASO A PASO */}
-                <h2 className="section-title">Paso a Paso Infalible</h2>
+                <h2 className="section-title">Passo a Passo Infalível</h2>
                 <div className="step-container">
                     {/* Paso 1 */}
                     <div className="step-card">
                         <div className="step-number">01</div>
-                        <h3 className="step-title">Hidratar la Gelatina</h3>
+                        <h3 className="step-title">Hidratar a Gelatina</h3>
                         <div className="step-content">
-                            <p>Mezcla la gelatina en polvo con los 60ml de agua fría en un tazón pequeño. Remueve bien y deja
-                                reposar 5-10 minutos hasta que absorba el líquido y parezca una "esponja".</p>
+                            <p>Misture a gelatina em pó com os 60ml de água fria em uma tigela pequena. Mexa bem e deixe
+                                descansar 5-10 minutos até que absorva o líquido e pareça uma "esponja".</p>
                         </div>
                     </div>
 
                     {/* Paso 2 */}
                     <div className="step-card">
                         <div className="step-number">02</div>
-                        <h3 className="step-title">El Almíbar (Punto Exacto)</h3>
+                        <h3 className="step-title">A Calda (Ponto Exato)</h3>
                         <div className="step-content">
-                            <p>En una olla, coloca azúcar, agua y glucosa. Lleva a fuego medio sin revolver. <br /><br />
-                                <strong>🌡️ Temperatura:</strong> 115°C - 118°C (Punto bola blanda).
+                            <p>Em uma panela, coloque açúcar, água e glicose. Leve ao fogo médio sem mexer. <br /><br />
+                                <strong>🌡️ Temperatura:</strong> 115°C - 118°C (Ponto bola macia).
                             </p>
                             <div className="tip-box">
-                                <div className="tip-title"><i className="ri-lightbulb-flash-line"></i> SIN TERMÓMETRO:</div>
-                                <p>Deja caer un poco de almíbar en un vaso con agua fría. Si puedes formar una bolita suave y
-                                    flexible con los dedos, ¡está listo!</p>
+                                <div className="tip-title"><i className="ri-lightbulb-flash-line"></i> SEM TERMÔMETRO:</div>
+                                <p>Deixe cair um pouco de calda em um copo com água fria. Se conseguir formar uma bolinha macia e
+                                    flexível com os dedos, está pronto!</p>
                             </div>
                         </div>
                     </div>
@@ -112,65 +112,65 @@ const MarshmallowGuide: React.FC<MarshmallowGuideProps> = ({ onBack }) => {
                     {/* Paso 3 */}
                     <div className="step-card">
                         <div className="step-number">03</div>
-                        <h3 className="step-title">Batir, Batir, Batir</h3>
+                        <h3 className="step-title">Bater, Bater, Bater</h3>
                         <div className="step-content">
-                            <p>Derrite la gelatina hidratada (microondas 15 seg). Colócala en la batidora. Enciende y agrega el
-                                almíbar caliente en forma de hilo por el borde.<br /> Sube a velocidad máxima y bate 8-12 minutos
-                                hasta obtener una mezcla blanca, brillante
-                                y que forme picos firmes. Agrega vainilla y colorante al final.</p>
+                            <p>Derreta a gelatina hidratada (microondas 15 seg). Coloque na batedeira. Ligue e adicione a
+                                calda quente em forma de fio pela borda.<br /> Aumente para velocidade máxima e bata 8-12 minutos
+                                até obter uma mistura branca, brilhante
+                                e que forme picos firmes. Adicione baunilha e corante no final.</p>
                         </div>
                     </div>
 
                     {/* Paso 4 */}
                     <div className="step-card">
                         <div className="step-number">04</div>
-                        <h3 className="step-title">Dejar Firmar</h3>
+                        <h3 className="step-title">Deixar Firmar</h3>
                         <div className="step-content">
-                            <p>Engrasa un molde y espolvorea con la mezcla de polvos (Glass + Maicena). Vierte la mezcla, alisa
-                                rápido y cubre con más polvo.<br /> ⏳ <strong>Tiempo:</strong> Deja reposar 6-8 horas a
+                            <p>Unte uma forma e polvilhe com a mistura de pós (Confeiteiro + Maisena). Despeje a mistura, alise
+                                rápido e cubra com mais pó.<br /> ⏳ <strong>Tempo:</strong> Deixe descansar 6-8 horas em
                                 temperatura ambiente.</p>
                         </div>
                     </div>
                 </div>
 
                 {/* MASA MOLDEABLE TABS */}
-                <h2 className="section-title">Técnicas de Moldeado</h2>
+                <h2 className="section-title">Técnicas de Moldagem</h2>
                 <div className="tabs-container">
                     <div className="tab-headers">
                         <button
                             className={`tab-btn ${activeTab === 'tab1' ? 'active' : ''}`}
                             onClick={() => setActiveTab('tab1')}
                         >
-                            🖐️ Opción 1: Con las Manos
+                            🖐️ Opção 1: Com as Mãos
                         </button>
                         <button
                             className={`tab-btn ${activeTab === 'tab2' ? 'active' : ''}`}
                             onClick={() => setActiveTab('tab2')}
                         >
-                            🎨 Opción 2: Manga Pastelera
+                            🎨 Opção 2: Manga de Confeitar
                         </button>
                     </div>
 
                     <div id="tab1" className={`tab-content ${activeTab === 'tab1' ? 'active' : ''}`}>
-                        <p><strong>Perfecto para figuras detalladas (conejos, personajes).</strong><br /><br /> 1. Corta un trozo
-                            del malvavisco ya firme (reposado 8h).<br /> 2. Amasa con las manos agregando poco a poco la mezcla
-                            "antiadherente" (azúcar glass + maicena).<br /> 3. El punto es cuando parece plastilina: no se pega,
-                            se estira sin romperse y mantiene la forma.<br /><br />
-                            <span className="highlight">TIP:</span> Si se seca, agrega una gotita de agua.
+                        <p><strong>Perfeito para figuras detalhadas (coelhos, personagens).</strong><br /><br /> 1. Corte um pedaço
+                            do marshmallow já firme (descansado 8h).<br /> 2. Amasse com as mãos adicionando pouco a pouco a mistura
+                            "antiaderente" (açúcar de confeiteiro + maisena).<br /> 3. O ponto é quando parece massinha: não gruda,
+                            estica sem quebrar e mantém a forma.<br /><br />
+                            <span className="highlight">DICA:</span> Se secar, adicione uma gotinha de água.
                         </p>
                     </div>
                     <div id="tab2" className={`tab-content ${activeTab === 'tab2' ? 'active' : ''}`}>
-                        <p><strong>Perfecto para formas rápidas y fluidas.</strong><br /><br /> 1. Usa la mezcla RECIÉN batida (aún
-                            tibia y fluida).<br /> 2. Coloca en manga pastelera con boquilla redonda.<br /> 3. Haz las formas
-                            directamente sobre una bandeja con maicena.<br /><br />
-                            <span className="highlight">TIP:</span> Trabaja rápido antes de que la gelatina cuaje.
+                        <p><strong>Perfeito para formas rápidas e fluidas.</strong><br /><br /> 1. Use a mistura RECÉM batida (ainda
+                            morna e fluida).<br /> 2. Coloque em manga de confeitar com bico redondo.<br /> 3. Faça as formas
+                            diretamente sobre uma bandeja com maisena.<br /><br />
+                            <span className="highlight">DICA:</span> Trabalhe rápido antes que a gelatina endureça.
                         </p>
                     </div>
                 </div>
 
                 {/* CONEJITO SECTION */}
                 <div className="accordion-section">
-                    <h2 className="section-title" style={{ color: 'var(--pink)' }}>🐰 Moldeado: Conejito Detallado</h2>
+                    <h2 className="section-title" style={{ color: 'var(--pink)' }}>🐰 Moldagem: Coelhinho Detalhado</h2>
 
                     <div className="accordion-item">
                         <div className={`accordion-header ${activeAccordion === 'c1' ? 'active' : ''}`} onClick={() => toggleAccordion('c1')}>
@@ -265,7 +265,7 @@ const MarshmallowGuide: React.FC<MarshmallowGuideProps> = ({ onBack }) => {
                 </div>
 
                 {/* FLORES FLIP CARDS */}
-                <h2 className="section-title" style={{ color: 'var(--dark-purple)' }}>🌺 Moldeado: Flores 3D</h2>
+                <h2 className="section-title" style={{ color: 'var(--dark-purple)' }}>🌺 Moldagem: Flores 3D</h2>
                 <div className="flower-grid">
 
                     {/* Flor 1 */}
@@ -273,16 +273,16 @@ const MarshmallowGuide: React.FC<MarshmallowGuideProps> = ({ onBack }) => {
                         <div className="flip-inner">
                             <div className="flip-front">
                                 <i className="ri-flower-line flower-icon"></i>
-                                <div className="flower-title">Flor Simple</div>
-                                <div className="tap-hint">Tap para ver pasos 👆</div>
+                                <div className="flower-title">Flor Simples</div>
+                                <div className="tap-hint">Toque para ver passos 👆</div>
                             </div>
                             <div className="flip-back">
                                 <h3 style={{ marginBottom: '20px', color: 'var(--pink)' }}>Pasos:</h3>
                                 <p style={{ fontSize: '24px', lineHeight: 1.5 }}>
-                                    1. Haz un centro redondo aplastado.<br /> 2. Haz 5 gotitas para pétalos.<br /> 3. Pega los
-                                    pétalos alrededor del centro.<br /> 4. Marca una línea central en cada pétalo con un
-                                    palillo.<br />
-                                    <br /><strong>Secado:</strong> 2-4 horas.
+                                    1. Faça um centro redondo achatado.<br /> 2. Faça 5 gotinhas para pétalas.<br /> 3. Cole as
+                                    pétalas ao redor do centro.<br /> 4. Marque uma linha central em cada pétala com um
+                                    palito.<br />
+                                    <br /><strong>Secagem:</strong> 2-4 horas.
                                 </p>
                             </div>
                         </div>
@@ -294,15 +294,15 @@ const MarshmallowGuide: React.FC<MarshmallowGuideProps> = ({ onBack }) => {
                             <div className="flip-front">
                                 <i className="ri-plant-line flower-icon" style={{ color: '#FF8A80' }}></i>
                                 <div className="flower-title">Rosa Fácil</div>
-                                <div className="tap-hint">Tap para ver pasos 👆</div>
+                                <div className="tap-hint">Toque para ver passos 👆</div>
                             </div>
                             <div className="flip-back">
                                 <h3 style={{ marginBottom: '20px', color: 'var(--pink)' }}>Pasos (Muy Vendida):</h3>
                                 <p style={{ fontSize: '24px', lineHeight: 1.5 }}>
-                                    1. Haz un conito base.<br /> 2. Aplasta 6-8 bolitas hasta hacer discos muy finos
-                                    (pétalos).<br /> 3. Enrolla el primero sobre el cono.<br /> 4. Pega los demás intercalados,
-                                    abriendo los bordes hacia afuera.<br />
-                                    <br /><strong>Tip:</strong> Corta la base sobrante.
+                                    1. Faça um conezinho base.<br /> 2. Achate 6-8 bolinhas até fazer discos bem finos
+                                    (pétalas).<br /> 3. Enrole a primeira sobre o cone.<br /> 4. Cole as demais intercaladas,
+                                    abrindo as bordas para fora.<br />
+                                    <br /><strong>Dica:</strong> Corte a base sobrando.
                                 </p>
                             </div>
                         </div>
@@ -313,14 +313,14 @@ const MarshmallowGuide: React.FC<MarshmallowGuideProps> = ({ onBack }) => {
                         <div className="flip-inner">
                             <div className="flip-front">
                                 <i className="ri-leaf-line flower-icon" style={{ color: 'var(--green)' }}></i>
-                                <div className="flower-title">Con Hojas</div>
-                                <div className="tap-hint">Tap para ver pasos 👆</div>
+                                <div className="flower-title">Com Folhas</div>
+                                <div className="tap-hint">Toque para ver passos 👆</div>
                             </div>
                             <div className="flip-back">
                                 <h3 style={{ marginBottom: '20px', color: 'var(--green)' }}>Pasos:</h3>
                                 <p style={{ fontSize: '24px', lineHeight: 1.5 }}>
-                                    1. Arma una flor simple de 5 pétalos.<br /> 2. Haz 2 óvalos verdes y aplástalos.<br /> 3. Marca
-                                    las venas con un tenedor o palillo.<br /> 4. Pega debajo de la flor asomando por los
+                                    1. Monte uma flor simples de 5 pétalas.<br /> 2. Faça 2 óvalos verdes e achate.<br /> 3. Marque
+                                    as nervuras com um garfo ou palito.<br /> 4. Cole embaixo da flor aparecendo pelos
                                     lados.<br />
                                     <br /><strong>Uso:</strong> Ideal para cupcakes.
                                 </p>
@@ -331,7 +331,7 @@ const MarshmallowGuide: React.FC<MarshmallowGuideProps> = ({ onBack }) => {
 
                 {/* PERSONAJES UNIVERSAL */}
                 <div className="accordion-section">
-                    <h2 className="section-title" style={{ color: 'var(--blue)' }}>👧 Personajes: Base Universal</h2>
+                    <h2 className="section-title" style={{ color: 'var(--blue)' }}>👧 Personagens: Base Universal</h2>
 
                     <div className="accordion-item">
                         <div className={`accordion-header ${activeAccordion === 'p1' ? 'active' : ''}`} onClick={() => toggleAccordion('p1')}>
@@ -404,16 +404,16 @@ const MarshmallowGuide: React.FC<MarshmallowGuideProps> = ({ onBack }) => {
                 </div>
 
                 {/* TIMELINE & TIPS */}
-                <h2 className="section-title">Tiempos y Cuidados</h2>
+                <h2 className="section-title">Tempos e Cuidados</h2>
 
                 <div className="timeline">
                     <div className="time-point">
                         <span className="time-val">30 min</span>
-                        <span className="time-desc">Secado entre capas</span>
+                        <span className="time-desc">Secagem entre camadas</span>
                     </div>
                     <div className="time-point">
                         <span className="time-val">24 hrs</span>
-                        <span className="time-desc">Firme para empacar</span>
+                        <span className="time-desc">Firme para embalar</span>
                     </div>
                     <div className="time-point">
                         <span className="time-val">48 hrs</span>
@@ -422,26 +422,26 @@ const MarshmallowGuide: React.FC<MarshmallowGuideProps> = ({ onBack }) => {
                 </div>
 
                 <div className="tips-grid">
-                    <div className="check-item"><i className="ri-checkbox-circle-fill"></i> Manos bien espolvoreadas</div>
-                    <div className="check-item"><i className="ri-checkbox-circle-fill"></i> NUNCA refrigerar (humedad)</div>
-                    <div className="check-item"><i className="ri-checkbox-circle-fill"></i> Usa colorante en Gel</div>
-                    <div className="check-item"><i className="ri-checkbox-circle-fill"></i> Figuras pequeñas venden mejor</div>
-                    <div className="check-item"><i className="ri-checkbox-circle-fill"></i> Evita piezas muy gruesas</div>
-                    <div className="check-item"><i className="ri-checkbox-circle-fill"></i> Secar bien antes de bolsa</div>
+                    <div className="check-item"><i className="ri-checkbox-circle-fill"></i> Mãos bem polvilhadas</div>
+                    <div className="check-item"><i className="ri-checkbox-circle-fill"></i> NUNCA refrigerar (umidade)</div>
+                    <div className="check-item"><i className="ri-checkbox-circle-fill"></i> Use corante em Gel</div>
+                    <div className="check-item"><i className="ri-checkbox-circle-fill"></i> Figuras pequenas vendem melhor</div>
+                    <div className="check-item"><i className="ri-checkbox-circle-fill"></i> Evite peças muito grossas</div>
+                    <div className="check-item"><i className="ri-checkbox-circle-fill"></i> Secar bem antes de embalar</div>
                 </div>
 
                 <div className="storage-container">
                     <div className="storage-card">
                         <i className="ri-archive-line storage-icon"></i>
-                        <div className="storage-text">Caja Hermética</div>
+                        <div className="storage-text">Caixa Hermética</div>
                     </div>
                     <div className="storage-card">
                         <i className="ri-sun-cloudy-line storage-icon"></i>
-                        <div className="storage-text">Lejos del Sol</div>
+                        <div className="storage-text">Longe do Sol</div>
                     </div>
                     <div className="storage-card">
                         <i className="ri-shopping-bag-3-line storage-icon"></i>
-                        <div className="storage-text">Bolsa Celofán</div>
+                        <div className="storage-text">Saco Celofane</div>
                     </div>
                 </div>
 

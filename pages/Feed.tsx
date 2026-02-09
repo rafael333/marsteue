@@ -59,13 +59,13 @@ const Feed: React.FC<FeedProps> = ({ onBack, onHomeClick, onProfileClick, onFavo
 
     const newPost: Post = {
       id: Date.now(),
-      user: 'Tú',
+      user: 'Você',
       userImg: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop',
       image: newImage,
       caption: newCaption,
       likes: 0,
       comments: 0,
-      level: 'Principiante'
+      level: 'Iniciante'
     };
 
     const saved = localStorage.getItem('myPosts');
@@ -97,14 +97,14 @@ const Feed: React.FC<FeedProps> = ({ onBack, onHomeClick, onProfileClick, onFavo
       {isModalOpen && (
         <div className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
           <div className="bg-white dark:bg-[#1b120d] rounded-2xl p-6 w-full max-w-md shadow-2xl border border-primary/20">
-            <h3 className="text-xl font-bold text-primary mb-4">Nueva Publicación</h3>
+            <h3 className="text-xl font-bold text-primary mb-4">Nova Publicação</h3>
 
-            <label className="block text-sm font-bold text-[#9a664c] dark:text-white/60 mb-2">URL de la Imagen</label>
+            <label className="block text-sm font-bold text-[#9a664c] dark:text-white/60 mb-2">URL da Imagem</label>
             <input
               type="text"
               value={newImage}
               onChange={(e) => setNewImage(e.target.value)}
-              placeholder="Pega el enlace de la imagen aquí..."
+              placeholder="Cole o link da imagem aqui..."
               className="w-full p-3 rounded-xl bg-background-light dark:bg-white/5 border border-primary/20 text-[#1b120d] dark:text-white mb-2 focus:outline-none focus:border-primary"
             />
 
@@ -127,14 +127,14 @@ const Feed: React.FC<FeedProps> = ({ onBack, onHomeClick, onProfileClick, onFavo
               className="w-full py-2 rounded-xl border border-dashed border-primary/40 text-primary font-bold hover:bg-primary/5 transition-colors mb-4 flex items-center justify-center gap-2"
             >
               <span className="material-symbols-outlined text-lg">upload_file</span>
-              Subir desde Dispositivo
+              Enviar do Dispositivo
             </button>
 
-            <label className="block text-sm font-bold text-[#9a664c] dark:text-white/60 mb-2">Descripción</label>
+            <label className="block text-sm font-bold text-[#9a664c] dark:text-white/60 mb-2">Descrição</label>
             <textarea
               value={newCaption}
               onChange={(e) => setNewCaption(e.target.value)}
-              placeholder="Escribe algo sobre tu dulce..."
+              placeholder="Escreva algo sobre seu doce..."
               className="w-full p-3 rounded-xl bg-background-light dark:bg-white/5 border border-primary/20 text-[#1b120d] dark:text-white mb-6 focus:outline-none focus:border-primary h-24 resize-none"
             />
 
@@ -160,7 +160,7 @@ const Feed: React.FC<FeedProps> = ({ onBack, onHomeClick, onProfileClick, onFavo
         <button onClick={onBack} className="text-primary size-10 flex items-center justify-center cursor-pointer">
           <span className="material-symbols-outlined">arrow_back_ios</span>
         </button>
-        <h2 className="text-[#1b120d] dark:text-white text-lg font-bold">Comunidad</h2>
+        <h2 className="text-[#1b120d] dark:text-white text-lg font-bold">Comunidade</h2>
         <button
           onClick={() => setIsModalOpen(true)}
           className="text-[#1b120d] dark:text-white size-10 flex items-center justify-center active:scale-90 transition-transform"
@@ -180,7 +180,7 @@ const Feed: React.FC<FeedProps> = ({ onBack, onHomeClick, onProfileClick, onFavo
                 <img src={post.userImg} className="size-10 rounded-full border border-primary/20" alt="" />
                 <div>
                   <p className="text-sm font-bold text-[#1b120d] dark:text-white">{post.user}</p>
-                  <p className="text-[10px] text-[#9a664c] dark:text-white/40 uppercase tracking-widest font-bold">{post.level || 'Principiante'}</p>
+                  <p className="text-[10px] text-[#9a664c] dark:text-white/40 uppercase tracking-widest font-bold">{post.level || 'Iniciante'}</p>
                 </div>
               </div>
               {post.video ? (
@@ -208,21 +208,21 @@ const Feed: React.FC<FeedProps> = ({ onBack, onHomeClick, onProfileClick, onFavo
       <nav className="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] md:w-[400px] bg-white/90 dark:bg-[#1b120d]/90 backdrop-blur-xl shadow-2xl rounded-full px-6 py-3 border border-black/5 flex items-center justify-between z-50">
         <button onClick={onHomeClick} className="flex flex-col items-center gap-1 text-[#9a664c] dark:text-white/40 cursor-pointer hover:text-primary transition-all active:scale-90">
           <span className="material-symbols-outlined">home</span>
-          <span className="text-[10px] font-bold">Inicio</span>
+          <span className="text-[10px] font-bold">Início</span>
         </button>
 
         <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex flex-col items-center gap-1 text-primary cursor-pointer scale-110 transition-transform duration-300">
           <span className="material-symbols-outlined fill-icon">dynamic_feed</span>
-          <span className="text-[10px] font-bold">Comunidad</span>
+          <span className="text-[10px] font-bold">Comunidade</span>
         </button>
         <button onClick={onFavoritesClick} className="flex flex-col items-center gap-1 text-[#9a664c] dark:text-white/40 cursor-pointer hover:text-primary transition-all active:scale-90">
           <span className="material-symbols-outlined">favorite</span>
-          <span className="text-[10px] font-bold">Contenido</span>
+          <span className="text-[10px] font-bold">Conteúdo</span>
         </button>
         <button disabled className="flex flex-col items-center gap-1 text-[#9a664c]/40 dark:text-white/20 cursor-not-allowed opacity-50 relative">
-          <div className="absolute -top-2 -right-2 bg-red-500 text-white text-[8px] font-bold px-2 py-1 rounded-full shadow-lg">Mantenimiento</div>
+          <div className="absolute -top-2 -right-2 bg-red-500 text-white text-[8px] font-bold px-2 py-1 rounded-full shadow-lg">Manutenção</div>
           <span className="material-symbols-outlined">person</span>
-          <span className="text-[10px] font-bold">Próximamente</span>
+          <span className="text-[10px] font-bold">Em breve</span>
         </button>
       </nav>
     </div>

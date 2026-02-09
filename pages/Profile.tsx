@@ -10,17 +10,17 @@ interface ProfileProps {
 
 const Profile: React.FC<ProfileProps> = ({ onBack, onFeedClick, onHomeClick, onFavoritesClick }) => {
   const achievements = [
-    { id: 1, icon: 'auto_awesome', label: 'Maestro del Merengue', color: 'bg-amber-100 text-amber-600' },
-    { id: 2, icon: 'cloud', label: 'Nube de Azúcar', color: 'bg-blue-100 text-blue-600' },
-    { id: 3, icon: 'local_fire_department', label: 'Experto en Llama', color: 'bg-orange-100 text-orange-600' },
+    { id: 1, icon: 'auto_awesome', label: 'Mestre do Merengue', color: 'bg-amber-100 text-amber-600' },
+    { id: 2, icon: 'cloud', label: 'Nuvem de Açúcar', color: 'bg-blue-100 text-blue-600' },
+    { id: 3, icon: 'local_fire_department', label: 'Expert em Chama', color: 'bg-orange-100 text-orange-600' },
   ];
 
   const menuItems = [
-    { icon: 'edit', label: 'Editar Perfil', sub: 'Nombre, foto y bio' },
+    { icon: 'edit', label: 'Editar Perfil', sub: 'Nome, foto e bio' },
     { icon: 'workspace_premium', label: 'Certificados', sub: '6 cursos completados' },
-    { icon: 'favorite', label: 'Mis Recetas', sub: '24 guardadas', action: onFavoritesClick },
-    { icon: 'settings', label: 'Configuración', sub: 'Notificaciones y privacidad' },
-    { icon: 'help', label: 'Soporte', sub: 'Habla con el chef' },
+    { icon: 'favorite', label: 'Minhas Receitas', sub: '24 salvas', action: onFavoritesClick },
+    { icon: 'settings', label: 'Configurações', sub: 'Notificações e privacidade' },
+    { icon: 'help', label: 'Suporte', sub: 'Fale com o chef' },
   ];
 
   return (
@@ -29,7 +29,7 @@ const Profile: React.FC<ProfileProps> = ({ onBack, onFeedClick, onHomeClick, onF
         <button onClick={onBack} className="text-primary size-10 flex items-center justify-center cursor-pointer">
           <span className="material-symbols-outlined">arrow_back_ios</span>
         </button>
-        <h2 className="text-[#1b120d] dark:text-white text-lg font-bold">Mi Perfil</h2>
+        <h2 className="text-[#1b120d] dark:text-white text-lg font-bold">Meu Perfil</h2>
         <button className="text-[#1b120d] dark:text-white size-10 flex items-center justify-center">
           <span className="material-symbols-outlined">more_horiz</span>
         </button>
@@ -47,13 +47,13 @@ const Profile: React.FC<ProfileProps> = ({ onBack, onFeedClick, onHomeClick, onF
             </div>
           </div>
           <h1 className="text-2xl font-black text-[#1b120d] dark:text-white mt-4">Ana Silva</h1>
-          <p className="text-primary font-bold text-sm bg-primary/10 px-3 py-1 rounded-full mt-2">Pastelera Experta</p>
+          <p className="text-primary font-bold text-sm bg-primary/10 px-3 py-1 rounded-full mt-2">Confeiteira Especialista</p>
         </div>
 
         <div className="grid grid-cols-3 gap-4 px-6 py-4">
           {[
             { val: '12', label: 'Cursos' },
-            { val: '48', label: 'Recetas' },
+            { val: '48', label: 'Receitas' },
             { val: '3.2k', label: 'Seguidores' }
           ].map((stat, i) => (
             <div key={i} className="bg-white dark:bg-white/5 p-4 rounded-2xl border border-black/5 text-center shadow-sm">
@@ -64,7 +64,7 @@ const Profile: React.FC<ProfileProps> = ({ onBack, onFeedClick, onHomeClick, onF
         </div>
 
         <div className="px-6 mt-6">
-          <h3 className="text-[#1b120d] dark:text-white font-bold mb-4">Mis Logros</h3>
+          <h3 className="text-[#1b120d] dark:text-white font-bold mb-4">Minhas Conquistas</h3>
           <div className="flex gap-4 overflow-x-auto hide-scrollbar pb-2 md:grid md:grid-cols-3 md:overflow-visible">
             {achievements.map(item => (
               <div key={item.id} className="flex flex-col items-center gap-2 min-w-[100px]">
@@ -100,16 +100,16 @@ const Profile: React.FC<ProfileProps> = ({ onBack, onFeedClick, onHomeClick, onF
       <nav className="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] md:w-[400px] bg-white/90 dark:bg-[#1b120d]/90 backdrop-blur-xl shadow-2xl rounded-full px-6 py-3 border border-black/5 flex items-center justify-between z-50">
         <button onClick={onHomeClick} className="flex flex-col items-center gap-1 text-[#9a664c] dark:text-white/40 cursor-pointer hover:text-primary transition-all active:scale-90">
           <span className="material-symbols-outlined">home</span>
-          <span className="text-[10px] font-bold">Inicio</span>
+          <span className="text-[10px] font-bold">Início</span>
         </button>
 
         <button onClick={onFeedClick} className="flex flex-col items-center gap-1 text-[#9a664c] dark:text-white/40 cursor-pointer hover:text-primary transition-all active:scale-90">
           <span className="material-symbols-outlined">dynamic_feed</span>
-          <span className="text-[10px] font-bold">Comunidad</span>
+          <span className="text-[10px] font-bold">Comunidade</span>
         </button>
         <button onClick={onFavoritesClick} className="flex flex-col items-center gap-1 text-[#9a664c] dark:text-white/40 cursor-pointer hover:text-primary transition-all active:scale-90">
           <span className="material-symbols-outlined">favorite</span>
-          <span className="text-[10px] font-bold">Contenido</span>
+          <span className="text-[10px] font-bold">Conteúdo</span>
         </button>
         <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex flex-col items-center gap-1 text-primary cursor-pointer scale-110 transition-transform duration-300">
           <span className="material-symbols-outlined fill-icon">person</span>

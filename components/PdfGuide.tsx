@@ -27,7 +27,7 @@ const PdfGuide: React.FC<PdfGuideProps> = ({ onBack, pdfUrl, title, downloadName
                         className="flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-full font-bold shadow-lg hover:bg-primary-dark transition-colors"
                     >
                         <span className="material-symbols-outlined">download</span>
-                        Descargar PDF
+                        Baixar PDF
                     </a>
                 </div>
 
@@ -39,7 +39,7 @@ const PdfGuide: React.FC<PdfGuideProps> = ({ onBack, pdfUrl, title, downloadName
                         title={title}
                     >
                         <div className="flex flex-col items-center justify-center h-full p-8 text-center">
-                            <p className="mb-4 text-gray-500">Tu navegador no puede mostrar este PDF directamente.</p>
+                            <p className="mb-4 text-gray-500">Seu navegador não pode exibir este PDF diretamente.</p>
                             <a
                                 href={pdfUrl}
                                 target="_blank"

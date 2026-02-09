@@ -18,9 +18,9 @@ const Home: React.FC<HomeProps> = ({ onLessonClick, onProfileClick, onFeedClick,
   const highlightDate = tutorials.find(t => t.isHighlight) || tutorials[0];
 
   const tips: ChefTip[] = [
-    { id: 't1', icon: 'thermostat', title: 'Temperatura del Almíbar', subtitle: 'El secreto de los 115°C' },
-    { id: 't2', icon: 'humidity_mid', title: 'Control de Humedad', subtitle: 'Evita el melado' },
-    { id: 't3', icon: 'kitchen', title: 'Almacenamiento', subtitle: 'Frescura por 3 semanas' }
+    { id: 't1', icon: 'thermostat', title: 'Temperatura da Calda', subtitle: 'O segredo dos 115°C' },
+    { id: 't2', icon: 'humidity_mid', title: 'Controle de Umidade', subtitle: 'Evite o derretimento' },
+    { id: 't3', icon: 'kitchen', title: 'Armazenamento', subtitle: 'Frescor por 3 semanas' }
   ];
 
   return (
@@ -32,7 +32,7 @@ const Home: React.FC<HomeProps> = ({ onLessonClick, onProfileClick, onFeedClick,
             style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAmNoU9wXxKixg_DdG0HSOnQaDF1QG_-Pbolpb146IreNq66ZdP1-WxtCsFOx1AuUob3BXGVXBbcLq2a2lYMZNQddlKO8M5WcIGh4UE63jjYr_qa6MWbLpKDbJdnw5p5uDcCGsfFXee1gD2IHNERQLjDhqFoUKwknq3TYagF49O54mj_c7XW16hN2B3Tbh48HPbMneMhyi6C_kyyWmJqnmJLYsWynZv2kVf3FxbYrmPjhCtNycr-WXPdUOcQ41DTw7UT0C8p8GsZjOP")' }}
           ></div>
           <div>
-            <p className="text-xs text-[#9a664c] dark:text-white/60 font-medium">Bienvenida de nuevo,</p>
+            <p className="text-xs text-[#9a664c] dark:text-white/60 font-medium">Bem-vinda de volta,</p>
             <h2 className="text-[#1b120d] dark:text-white text-base font-bold leading-tight">{userName}</h2>
           </div>
         </div>
@@ -54,7 +54,7 @@ const Home: React.FC<HomeProps> = ({ onLessonClick, onProfileClick, onFeedClick,
           }}
         >
           <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase">
-            Destacado
+            Destaque
           </div>
           <div className="flex flex-col p-6 gap-2">
             <h1 className="text-white text-2xl md:text-4xl font-bold leading-tight">{highlightDate.title}</h1>
@@ -72,8 +72,8 @@ const Home: React.FC<HomeProps> = ({ onLessonClick, onProfileClick, onFeedClick,
 
       <section className="mt-6">
         <div className="flex items-center justify-between px-4 pb-2">
-          <h2 className="text-[#1b120d] dark:text-white text-xl font-bold tracking-tight">Nuevas Técnicas</h2>
-          <button onClick={() => { }} className="text-primary text-sm font-bold">Ver todo</button>
+          <h2 className="text-[#1b120d] dark:text-white text-xl font-bold tracking-tight">Novas Técnicas</h2>
+          <button onClick={() => { }} className="text-primary text-sm font-bold">Ver tudo</button>
         </div>
         <div className="flex overflow-x-auto hide-scrollbar px-4 gap-4 py-2 md:grid md:grid-cols-3 lg:grid-cols-4 md:overflow-visible">
           {techniques.map(t => (
@@ -99,7 +99,7 @@ const Home: React.FC<HomeProps> = ({ onLessonClick, onProfileClick, onFeedClick,
 
       <section className="mt-8">
         <div className="flex items-center justify-between px-4 pb-2">
-          <h2 className="text-[#1b120d] dark:text-white text-xl font-bold tracking-tight">Más Populares</h2>
+          <h2 className="text-[#1b120d] dark:text-white text-xl font-bold tracking-tight">Mais Populares</h2>
         </div>
         <div className="px-4 flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-3">
           {popular.map(p => (
@@ -122,7 +122,7 @@ const Home: React.FC<HomeProps> = ({ onLessonClick, onProfileClick, onFeedClick,
 
       <section className="mt-8 mb-4">
         <div className="flex items-center justify-between px-4 pb-2">
-          <h2 className="text-[#1b120d] dark:text-white text-xl font-bold tracking-tight">Consejos del Chef</h2>
+          <h2 className="text-[#1b120d] dark:text-white text-xl font-bold tracking-tight">Dicas do Chef</h2>
         </div>
         <div className="flex overflow-x-auto hide-scrollbar px-4 gap-3 py-2 md:grid md:grid-cols-3">
           {tips.map(tip => (
@@ -138,21 +138,21 @@ const Home: React.FC<HomeProps> = ({ onLessonClick, onProfileClick, onFeedClick,
       <nav className="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] md:w-[400px] bg-white/90 dark:bg-[#1b120d]/90 backdrop-blur-xl shadow-2xl rounded-full px-6 py-3 border border-black/5 flex items-center justify-between z-50">
         <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex flex-col items-center gap-1 text-primary cursor-pointer scale-110 transition-transform duration-300">
           <span className="material-symbols-outlined fill-icon">home</span>
-          <span className="text-[10px] font-bold">Inicio</span>
+          <span className="text-[10px] font-bold">Início</span>
         </button>
 
         <button onClick={onFeedClick} className="flex flex-col items-center gap-1 text-[#9a664c] dark:text-white/40 cursor-pointer hover:text-primary transition-all active:scale-90">
           <span className="material-symbols-outlined">dynamic_feed</span>
-          <span className="text-[10px] font-bold">Comunidad</span>
+          <span className="text-[10px] font-bold">Comunidade</span>
         </button>
         <button onClick={onFavoritesClick} className="flex flex-col items-center gap-1 text-[#9a664c] dark:text-white/40 cursor-pointer hover:text-primary transition-all active:scale-90">
           <span className="material-symbols-outlined">favorite</span>
-          <span className="text-[10px] font-bold">Contenido</span>
+          <span className="text-[10px] font-bold">Conteúdo</span>
         </button>
         <button disabled className="flex flex-col items-center gap-1 text-[#9a664c]/40 dark:text-white/20 cursor-not-allowed opacity-50 relative">
-          <div className="absolute -top-2 -right-2 bg-red-500 text-white text-[8px] font-bold px-2 py-1 rounded-full shadow-lg">Mantenimiento</div>
+          <div className="absolute -top-2 -right-2 bg-red-500 text-white text-[8px] font-bold px-2 py-1 rounded-full shadow-lg">Manutenção</div>
           <span className="material-symbols-outlined">person</span>
-          <span className="text-[10px] font-bold">Próximamente</span>
+          <span className="text-[10px] font-bold">Em breve</span>
         </button>
       </nav>
     </div>

@@ -104,8 +104,8 @@ const LessonDetails: React.FC<LessonDetailsProps> = ({ onBack, lessonId, onCours
     if (!lesson) {
         return (
             <div className="flex flex-col items-center justify-center min-h-screen bg-background-light dark:bg-background-dark">
-                <p className="text-[#1b120d] dark:text-white mb-4">Clase no encontrada.</p>
-                <button onClick={onBack} className="text-primary font-bold">Volver</button>
+                <p className="text-[#1b120d] dark:text-white mb-4">Aula não encontrada.</p>
+                <button onClick={onBack} className="text-primary font-bold">Voltar</button>
             </div>
         );
     }
@@ -177,7 +177,7 @@ const LessonDetails: React.FC<LessonDetailsProps> = ({ onBack, lessonId, onCours
                 >
                     <span className="material-symbols-outlined text-[24px]">arrow_back_ios</span>
                 </button>
-                <h2 className="text-[#1b120d] dark:text-white text-lg font-bold leading-tight flex-1 text-center">Malvaviscos 2.0</h2>
+                <h2 className="text-[#1b120d] dark:text-white text-lg font-bold leading-tight flex-1 text-center">Marshmallows 2.0</h2>
                 <div className="flex w-12 items-center justify-end"></div>
             </header>
 
@@ -224,7 +224,7 @@ const LessonDetails: React.FC<LessonDetailsProps> = ({ onBack, lessonId, onCours
 
                     {lesson.ingredients && (
                         <div className="mt-4">
-                            <h3 className="text-[#1b120d] dark:text-white text-sm font-bold mb-2">Ingredientes Necesarios</h3>
+                            <h3 className="text-[#1b120d] dark:text-white text-sm font-bold mb-2">Ingredientes Necessários</h3>
                             <div className="flex flex-col gap-2">
                                 {lesson.ingredients.map((ing, index) => {
                                     const [isExpanded, setIsExpanded] = React.useState(false);
@@ -261,8 +261,8 @@ const LessonDetails: React.FC<LessonDetailsProps> = ({ onBack, lessonId, onCours
                 {/* Progress Bar */}
                 <div className="flex flex-col gap-2.5 p-5 mt-2">
                     <div className="flex justify-between items-center">
-                        <p className="text-[#1b120d] dark:text-white text-xs font-bold uppercase tracking-widest opacity-80">Progreso de la Clase</p>
-                        <p className="text-primary text-xs font-black">{currentStepId} de {steps.length} pasos</p>
+                        <p className="text-[#1b120d] dark:text-white text-xs font-bold uppercase tracking-widest opacity-80">Progresso da Aula</p>
+                        <p className="text-primary text-xs font-black">{currentStepId} de {steps.length} passos</p>
                     </div>
                     <div className="rounded-full bg-marshmallow-pink dark:bg-white/5 h-3.5 overflow-hidden shadow-inner border border-black/5">
                         <div className="h-full rounded-full bg-primary shadow-sm" style={{ width: `${(currentStepId / steps.length) * 100}%` }}></div>
@@ -307,7 +307,7 @@ const LessonDetails: React.FC<LessonDetailsProps> = ({ onBack, lessonId, onCours
                                     <div className="flex-1">
                                         <p className={`text-[10px] font-black uppercase tracking-widest ${isActive ? 'text-primary' : 'text-gray-400'
                                             }`}>
-                                            {isActive ? 'Próximo Paso' : `Paso ${step.id}`}
+                                            {isActive ? 'Próximo Passo' : `Passo ${step.id}`}
                                         </p>
                                         <p className={`font-bold transition-all ${isCompleted
                                             ? 'text-[#1b120d]/40 dark:text-white/30 line-through decoration-primary/40'
@@ -338,22 +338,22 @@ const LessonDetails: React.FC<LessonDetailsProps> = ({ onBack, lessonId, onCours
                 <nav className="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] md:w-[400px] bg-white/90 dark:bg-[#1b120d]/90 backdrop-blur-xl shadow-2xl rounded-full px-6 py-3 border border-black/5 flex items-center justify-between z-50">
                     <button onClick={onHomeClick} className="flex flex-col items-center gap-1 text-[#9a664c] dark:text-white/40 cursor-pointer hover:text-primary transition-all active:scale-90">
                         <span className="material-symbols-outlined">home</span>
-                        <span className="text-[10px] font-bold">Inicio</span>
+                        <span className="text-[10px] font-bold">Início</span>
                     </button>
                     <button onClick={onCoursesClick} className="hidden">
                     </button>
                     <button onClick={onFeedClick} className="flex flex-col items-center gap-1 text-[#9a664c] dark:text-white/40 cursor-pointer hover:text-primary transition-all active:scale-90">
                         <span className="material-symbols-outlined">dynamic_feed</span>
-                        <span className="text-[10px] font-bold">Comunidad</span>
+                        <span className="text-[10px] font-bold">Comunidade</span>
                     </button>
                     <button onClick={onFavoritesClick} className="flex flex-col items-center gap-1 text-[#9a664c] dark:text-white/40 cursor-pointer hover:text-primary transition-all active:scale-90">
                         <span className="material-symbols-outlined">favorite</span>
-                        <span className="text-[10px] font-bold">Contenido</span>
+                        <span className="text-[10px] font-bold">Conteúdo</span>
                     </button>
                     <button disabled className="flex flex-col items-center gap-1 text-[#9a664c]/40 dark:text-white/20 cursor-not-allowed opacity-50 relative">
-                        <div className="absolute -top-2 -right-2 bg-red-500 text-white text-[8px] font-bold px-2 py-1 rounded-full shadow-lg">Mantenimiento</div>
+                        <div className="absolute -top-2 -right-2 bg-red-500 text-white text-[8px] font-bold px-2 py-1 rounded-full shadow-lg">Manutenção</div>
                         <span className="material-symbols-outlined">person</span>
-                        <span className="text-[10px] font-bold">Próximamente</span>
+                        <span className="text-[10px] font-bold">Em breve</span>
                     </button>
                 </nav>
             </div>
