@@ -46,15 +46,22 @@ const Home: React.FC<HomeProps> = ({ onLessonClick, onProfileClick, onFeedClick,
         </div>
       </header>
 
-      <section className="px-4 mt-2" onClick={() => onLessonClick(highlightDate.id)}>
+      <section className="px-4 mt-2">
         <div
-          className="bg-cover bg-center flex flex-col justify-end overflow-hidden rounded-xl min-h-80 md:min-h-[500px] relative group cursor-pointer shadow-lg transition-transform hover:scale-[1.01]"
+          className="bg-cover bg-center flex flex-col justify-end overflow-hidden rounded-xl min-h-80 md:min-h-[500px] relative group shadow-lg"
           style={{
             backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.7) 100%), url("${highlightDate.imageUrl}")`
           }}
         >
-          <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase">
-            Destaque
+          {/* Overlay de Manutenção */}
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center z-10">
+            <span className="material-symbols-outlined text-yellow-400 text-6xl mb-4 animate-pulse">construction</span>
+            <h3 className="text-white text-2xl font-bold mb-2">Em Manutenção</h3>
+            <p className="text-white/80 text-sm">Voltamos em breve com novidades!</p>
+          </div>
+
+          <div className="absolute top-4 right-4 bg-yellow-500 text-black px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase">
+            Manutenção
           </div>
           <div className="flex flex-col p-6 gap-2">
             <h1 className="text-white text-2xl md:text-4xl font-bold leading-tight">{highlightDate.title}</h1>
@@ -70,29 +77,40 @@ const Home: React.FC<HomeProps> = ({ onLessonClick, onProfileClick, onFeedClick,
         </div>
       </section>
 
-      <section className="mt-6">
+      <section className="mt-6 relative">
         <div className="flex items-center justify-between px-4 pb-2">
           <h2 className="text-[#1b120d] dark:text-white text-xl font-bold tracking-tight">Novas Técnicas</h2>
           <button onClick={() => { }} className="text-primary text-sm font-bold">Ver tudo</button>
         </div>
-        <div className="flex overflow-x-auto hide-scrollbar px-4 gap-4 py-2 md:grid md:grid-cols-3 lg:grid-cols-4 md:overflow-visible">
-          {techniques.map(t => (
-            <div key={t.id} className="flex flex-col gap-3 min-w-[180px] group cursor-pointer" onClick={() => onLessonClick(t.id)}>
-              <div
-                className="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-xl shadow-md transition-transform group-hover:scale-[1.02]"
-                style={{ backgroundImage: `url("${t.imageUrl}")` }}
-              ></div>
-              <div>
-                <p className="text-[#1b120d] dark:text-white text-sm font-bold leading-tight">{t.title}</p>
-                <p className="text-[#9a664c] dark:text-primary text-xs font-medium mt-1">{t.duration} • {t.category}</p>
+
+        {/* Container com overlay de manutenção */}
+        <div className="relative">
+          {/* Overlay de Manutenção */}
+          <div className="absolute inset-0 bg-black/50 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center z-20 mx-4">
+            <span className="material-symbols-outlined text-yellow-400 text-5xl mb-3 animate-pulse">construction</span>
+            <h3 className="text-white text-xl font-bold mb-1">Em Manutenção</h3>
+            <p className="text-white/80 text-xs">Voltamos em breve!</p>
+          </div>
+
+          <div className="flex overflow-x-auto hide-scrollbar px-4 gap-4 py-2 md:grid md:grid-cols-3 lg:grid-cols-4 md:overflow-visible opacity-40">
+            {techniques.map(t => (
+              <div key={t.id} className="flex flex-col gap-3 min-w-[180px] group">
+                <div
+                  className="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-xl shadow-md"
+                  style={{ backgroundImage: `url("${t.imageUrl}")` }}
+                ></div>
+                <div>
+                  <p className="text-[#1b120d] dark:text-white text-sm font-bold leading-tight">{t.title}</p>
+                  <p className="text-[#9a664c] dark:text-primary text-xs font-medium mt-1">{t.duration} • {t.category}</p>
+                </div>
               </div>
+            ))}
+            <div className="flex flex-col gap-3 min-w-[120px] items-center justify-center md:hidden snap-start">
+              <div className="w-full aspect-[4/5] bg-primary/5 dark:bg-white/5 rounded-xl flex items-center justify-center border-2 border-primary/20 border-dashed">
+                <span className="material-symbols-outlined text-primary text-3xl animate-pulse">arrow_forward</span>
+              </div>
+              <div className="h-[38px]"></div>
             </div>
-          ))}
-          <div className="flex flex-col gap-3 min-w-[120px] items-center justify-center md:hidden snap-start">
-            <div className="w-full aspect-[4/5] bg-primary/5 dark:bg-white/5 rounded-xl flex items-center justify-center border-2 border-primary/20 border-dashed">
-              <span className="material-symbols-outlined text-primary text-3xl animate-pulse">arrow_forward</span>
-            </div>
-            <div className="h-[38px]"></div>
           </div>
         </div>
       </section>
